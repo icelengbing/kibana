@@ -63,9 +63,9 @@ NOTE: Kibana 不能查询脚本化字段
 
 WARNING: 脚本化字段因为实时计算数据，所以有可能非常耗费资源，并对 Kibana 的性能产生直接的影响。请记住，脚本化字段是没有内置校验的。如果脚本有问题，每当你试图去查看动态生成的数据时都会得到异常。
 
-当你在 Kibana 中定义一个脚本化字段时，你可以选择使用的脚本语言。从 5.0 版本开始，默认的选项是 {es-ref} modules-scripting-expression.html[Lucene expressions] 和 {es-ref} modules-scripting-painless.html[Painless]。如果你在 Elasticsearch 中启用了其它动态脚本语言，也可以在 Kibana 中使用，但是不建议这样做。因为它们可能会不够安全 {es-ref} modules-scripting-security.html[sandboxed].
+当你在 Kibana 中定义一个脚本化字段时，你可以选择使用的脚本语言。从 5.0 版本开始，默认的选项是 {es-ref}modules-scripting-expression.html[Lucene expressions] 和 {es-ref}modules-scripting-painless.html[Painless]。如果你在 Elasticsearch 中启用了其它动态脚本语言，也可以在 Kibana 中使用，但是不建议这样做。因为它们可能会不够安全 {es-ref}modules-scripting-security.html[sandboxed].
 
-WARNING: 从 Elasticsearch 5.0 开始，不推荐使用 Groovy、 Javascript 和 Python 脚本，未来的版本中将不再支持这些脚本语言的支持。
+WARNING: 从 Elasticsearch 5.0 开始，不推荐使用 Groovy、 Javascript 和 Python 脚本，未来的版本中将不再支持这些脚本语言。
 
 你可以在表达式中引用任何单值的数值字段，例如：
 
@@ -90,7 +90,7 @@ https://www.elastic.co/blog/using-painless-kibana-scripted-fields[Using Painless
 . 输入你想要通过索引数据即时计算值的表达式。
 . 点击 *保存脚本化字段*。
 
-有关 Elasticsearch 中脚本化字段的更多信息，请参考 {es-ref} modules-scripting.html[Scripting] 。
+有关 Elasticsearch 中脚本化字段的更多信息，请参考 {es-ref}modules-scripting.html[Scripting] 。
 
 [float]
 [[update-scripted-field]]
@@ -101,7 +101,7 @@ https://www.elastic.co/blog/using-painless-kibana-scripted-fields[Using Painless
 . 点击你想要修改的脚本化字段的 *编辑* 按钮。
 . 修改并点击 *保存脚本化字段* 以更新字段。
 
-WARNING: 请注意，脚本字段没有内置验证。如果你的脚本有问题，每次当你尝试查看动态生成的数据时，你都会遇到异常。
+WARNING: 请注意，脚本化字段没有内置验证。如果你的脚本有问题，每次当你尝试查看动态生成的数据时，你都会遇到异常。
 
 [float]
 [[delete-scripted-field]]
